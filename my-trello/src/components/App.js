@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TrelloList from './TrelloList'
 import { connect } from 'react-redux';
 import TrelloActionButton from './TrelloActionButton';
+import Navigation from './Navigation'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { sort } from '../actions';
 import styled from 'styled-components';
@@ -34,7 +35,7 @@ class App extends Component {
     const { lists } = this.props;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
-          <h2>My Trello</h2>
+          <Navigation />
           <Droppable droppableId="all-lists" direction="horizontal" type="list">
             {provided => (
               <ListContainer {...provided.droppableProps} ref={provided.innerRef}>

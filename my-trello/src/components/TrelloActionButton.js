@@ -115,7 +115,7 @@ class TrelloActionButton extends React.Component {
 								backgroundColor: "#5aac44"}}>
 					{buttonTitle}
 				</Button>
-				<Icon style={{marginLeft: 8, cursor: "pointer"}}>close</Icon>
+				<Icon onClick={this.closeForm} style={{marginLeft: 8, cursor: "pointer"}}>close</Icon>
 			</div>
 		</div>;
 	};
